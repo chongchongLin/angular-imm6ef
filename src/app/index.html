@@ -1,0 +1,15 @@
+<div class="tree-container">
+<div class="add-file-container" n>
+  <input nz-input placeholder="请输入" [(ngModel)]="moveFileName" />
+  <div class="add-icon" (click)='confirmAddFile()'>加</div>
+  <div class="delete-icon">取消</div>
+
+</div>
+<nz-tree
+  [nzData]="nodes"
+  [nzSearchValue]="searchValue"
+  (nzClick)="nzEvent($event)"
+  (nzExpandChange)="nzEvent($event)"
+  (nzSearchValueChange)="nzEvent($event)"
+>
+</nz-tree>
